@@ -78,7 +78,7 @@ fun SignupPage(modifier: Modifier = Modifier, navController: NavController, auth
 
         Button(onClick = {
             authViewModel.signup(email, password)
-        }) {
+        }, enabled = authState.value != AuthState.Loading) {
             Text(text = "Create Account")
         }
 
