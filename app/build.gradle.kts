@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.compose.material3)
     implementation(libs.firebase.auth)
     implementation(libs.androidx.compose.runtime.livedata)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -19,10 +19,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val authViewModel: AuthViewModel by viewModels()
+        val gameViewModel : GameViewModel by viewModels()
+
         setContent {
             PokerTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    AppNavigation(modifier = Modifier.padding(innerPadding), authViewModel = authViewModel)
+                    AppNavigation(modifier = Modifier.padding(innerPadding), authViewModel = authViewModel, gameViewModel = gameViewModel)
                 }
             }
         }

@@ -10,7 +10,7 @@ import com.master.poker.pages.LoginPage
 import com.master.poker.pages.SignupPage
 
 @Composable
-fun AppNavigation(modifier: Modifier = Modifier, authViewModel: AuthViewModel){
+fun AppNavigation(modifier: Modifier = Modifier, authViewModel: AuthViewModel, gameViewModel: GameViewModel){
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "login", builder = {
@@ -21,7 +21,7 @@ fun AppNavigation(modifier: Modifier = Modifier, authViewModel: AuthViewModel){
             SignupPage(modifier, navController, authViewModel)
         }
         composable("home"){
-            HomePage(modifier, navController, authViewModel)
+            HomePage(modifier, navController, authViewModel, gameViewModel)
         }
     })
 
